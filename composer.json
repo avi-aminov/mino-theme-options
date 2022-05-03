@@ -1,0 +1,19 @@
+{
+    "name": "aviaminov/mino-theme-options",
+    "description": "Mino Theme Options",
+    "type": "library",
+    "license": "GPL",
+    "autoload": {
+        "classmap": [
+            "include/class"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Avi Aminov",
+            "email": "aviaminov.co.il@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

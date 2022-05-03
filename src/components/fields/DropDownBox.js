@@ -1,0 +1,55 @@
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { updateData } from '../../redux/actions/data';
+
+const DropDownBox = ({field}) => {
+    const label = field.label || '';
+    const description = field.description || '';
+    const options = field.options || null;
+
+    const [val, setVal] = useState(0);
+    const fields_data = useSelector((state) => state.dataReducer);
+    const dispatch = useDispatch();
+
+    const handleInputChange = (v) => {
+        setVal(v);
+        dispatch(updateData({key:[field.id], value:v}));
+    };
+    
+    useEffect( () => {
+        if(fields_data.data[field.id]){
+            const value = fields_data.data[field.id].toString();
+            setVal(value);
+        }
+    }, fields_data );
+
+    return(
+        <div className="options-content-inner">
+            <div className="grid">
+                <div className="left-col">
+                    <h5>{label}</h5>
+                </div>
+                <div className="right-col">
+                    <div className="box">
+                        <select onChange={(e) => {handleInputChange(e.target.value)}} name={field.id} id={field.id} className="general-select">
+                        {
+                            options.map((option) => {
+                                return (
+                                    <option value={option.key} selected={val === option.key}>
+                                        {option.value}
+                                    </option>
+                                );
+                            })
+                        }
+                        </select>
+                        <br />
+                        <br />
+                        <label for="files">{description}</label>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    )
+};
+
+export default DropDownBox;
