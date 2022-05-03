@@ -3,16 +3,6 @@
 
 
 /** TODO: */
-
-// 1 ***** Add Redux 
-
-
-// 2 ***** Axois move to service  ===DONE
-
-
-// 3 ***** Add autoload
-
-
 // 4 ***** Add options for meta box
     /*
     add_action('add_meta_boxes', 'add_product_meta');
