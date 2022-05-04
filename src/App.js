@@ -6,4 +6,5 @@ const App = () => {
         <Lobby />
     );
 };
+
 export default App; 

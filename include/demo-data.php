@@ -6,36 +6,36 @@ if(class_exists('MinoOptionsBuilder')){
     // Remix Icon v2.5.0
     // https://remixicon.com
 
-    $minoOptionsBuilder->set_group([
+    $minoOB->set_group([
         'id' => 'azd_brand',
         'name' => 'Brand',
         'icon' => 'ri-archive-drawer-line'
     ]);
 
-    $minoOptionsBuilder->set_group([
+    $minoOB->set_group([
         'id' => 'azd_general',
         'name' => 'General',
         'icon' => 'ri-contrast-drop-fill'
     ]);
 
-    $minoOptionsBuilder->set_group([
+    $minoOB->set_group([
         'id' => 'azd_header',
         'name' => 'Header',
         'icon' => 'ri-dvd-fill',
     ]);
 
-    $minoOptionsBuilder->set_group([
+    $minoOB->set_group([
         'id' => 'azd_backup',
         'name' => 'Backup',
     ]);
 
-    $minoOptionsBuilder->set_group([
+    $minoOB->set_group([
         'id' => 'azd_extra_fields',
         'name' => 'Extra',
         'icon' => 'ri-dvd-fill',
     ]);
 
-    $minoOptionsBuilder->set_fields_to_group('azd_brand',[
+    $minoOB->set_fields_to_group('azd_brand',[
         [
             'type' => 'title',
             'title' => 'Site Logo',
@@ -93,7 +93,7 @@ if(class_exists('MinoOptionsBuilder')){
         ],
     ]);
 
-    $minoOptionsBuilder->set_fields_to_group('azd_general',[
+    $minoOB->set_fields_to_group('azd_general',[
         [
             'id' => 'zad_is_rtl',
             'type' => 'switch',
@@ -140,7 +140,7 @@ if(class_exists('MinoOptionsBuilder')){
         ],
     ]);
 
-    $minoOptionsBuilder->set_fields_to_group('azd_header',[
+    $minoOB->set_fields_to_group('azd_header',[
         [
             'type' => 'select_box',
             'label' => 'Select Header',
@@ -208,7 +208,7 @@ if(class_exists('MinoOptionsBuilder')){
         ]
     ]);
 
-    $minoOptionsBuilder->set_fields_to_group('azd_backup',[
+    $minoOB->set_fields_to_group('azd_backup',[
         [
             'type' => 'title',
             'title' => 'You can save your current options. Download a Backup and Import.',
@@ -223,7 +223,7 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 
 
-    $minoOptionsBuilder->set_fields_to_group('azd_extra_fields',[
+    $minoOB->set_fields_to_group('azd_extra_fields',[
         [
             'type' => 'title',
             'title' => 'Extra fileds',
@@ -284,5 +284,5 @@ if(class_exists('MinoOptionsBuilder')){
     
     
     //$minoThemeOptionsBuilder->init($themeOptions);
-    $minoOptionsBuilder->init();
+    $minoOB->init();
 }

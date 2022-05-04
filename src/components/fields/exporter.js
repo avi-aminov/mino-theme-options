@@ -65,7 +65,7 @@ const Exporter = ({field}) => {
                                 <textarea rows="4" onChange={handleImportBackup} id={field.id} name={field.id} value={importData}></textarea>
                             </div>
                             <button onClick={setImportBackup} type="button" className="btn btn-success">Import a Backup</button>
-                            <div class="options-filed-label" htmlFor={field.id}> 
+                            <div className="options-filed-label" htmlFor={field.id}>
                                 {description}
                             </div>
                         </div>  

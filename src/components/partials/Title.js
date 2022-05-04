@@ -5,7 +5,7 @@ const Title = ({field}) => {
     const description = field.description || '';
 
     return(
-        <div class="header">
+        <div className="header">
             <h4>{title}</h4>
             <p>{description}</p>
         </div>

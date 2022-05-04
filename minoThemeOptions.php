@@ -23,7 +23,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 // create instance of builder class
-$minoOptionsBuilder = MinoOptionsBuilder::getInstance();
+$minoOB = MinoOptionsBuilder::getInstance();
 
 
 

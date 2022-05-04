@@ -82,9 +82,9 @@ const Lobby = () => {
                 </div>
             </div>
             : 
-            status == 'empty' ? 
+            status === 'empty' ?
                 <AlertMessage />  : 
-                <div class="loader"></div>
+                <div className="loader"> </div>
         }
         </>
     );
