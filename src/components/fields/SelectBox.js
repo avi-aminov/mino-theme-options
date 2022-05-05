@@ -12,9 +12,6 @@ const SelectBox = ({field}) => {
         scaling = 'vertical-box';
     }
 
-    // need add options for vertical view
-    // 
-
     const [val, setVal] = useState(0);
     const fields_data = useSelector((state) => state.dataReducer);
     const dispatch = useDispatch();
@@ -25,11 +22,11 @@ const SelectBox = ({field}) => {
     };
     
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id].toString();
             setVal(value);
         }
-    }, fields_data );
+    }, [fields_data]);
 
     return(
         <div className="options-content-inner">

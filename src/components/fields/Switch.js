@@ -6,18 +6,17 @@ const Switch = ({field}) => {
 
     const label = field.label || '';
     const description = field.description || '';
-    const size = field.size || 'size-l';
 
     const [val, setVal] = useState(false);
     const fields_data = useSelector((state) => state.dataReducer);
     const dispatch = useDispatch();
   
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id];
             setVal(value);
         }
-    },[]);
+    }, [fields_data]);
 
     const handleInputChange = (event) => {
         const value = !val;

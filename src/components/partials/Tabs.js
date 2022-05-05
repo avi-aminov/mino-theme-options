@@ -3,7 +3,9 @@ import { useSelector } from "react-redux";
 
 const Tabs = () => {
     const options = useSelector((state) => state.optionsReducer);
-    
+
+    console.log("options:::::", options);
+
     return(
         <div className="option-tab-header">
             <ul>

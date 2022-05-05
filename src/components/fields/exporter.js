@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { updateData } from '../../redux/actions/data';
 import { postRequest } from '../../services/Api';
 
 const Exporter = ({field}) => {
-   
+
     const label = field.label || '';
     const description = field.description || '';
 
@@ -16,13 +15,6 @@ const Exporter = ({field}) => {
         const value = event.target.value;
         setImportData(value);
     };
-    
-    useEffect( () => {
-        if(fields_data.data[field.id]){
-            const value = fields_data.data[field.id];
-            //setImportData(value);
-        }
-    }, fields_data );
 
     async function saveOptionsData(url, data) {
         //setLoader( 'Saving...' );
@@ -39,7 +31,7 @@ const Exporter = ({field}) => {
     const setImportBackup = (e) => {
         e.preventDefault();
         saveOptionsData('backup', {importData});
-    }
+    };
 
     const exportAndDownloadBackup = () => {
         const element = document.createElement("a");
@@ -80,7 +72,12 @@ const Exporter = ({field}) => {
                     <div className="right-col">
                         <div className="box textarea-fullwidth">
                             <div>
-                                <textarea rows="4" disabled onChange={ handleImportBackup } id={field.id} name={field.id} value={fields_data.data[field.id]}></textarea>
+                                {
+                                    fields_data.data ?
+                                        <textarea rows="4" disabled onchange={handleImportBackup} id={field.id}
+                                                  name={field.id} value={fields_data.data[field.id]}></textarea>
+                                        : null
+                                }
                             </div>
                             <button onClick={exportAndDownloadBackup} type="button" className="btn btn-success">Export and Download Backup</button>
                         </div>  

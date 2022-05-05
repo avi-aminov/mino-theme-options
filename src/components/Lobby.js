@@ -25,22 +25,32 @@ const Lobby = () => {
     const dispatch = useDispatch();
 
     useEffect( () => {
-        fetchOptionsData();
-    }, [] );
+        fetchOptions();
+    }, []);
 
-    async function fetchOptionsData() {
+
+    /**
+     * get options fields
+     * @returns {Promise<void>}
+     */
+    async function fetchOptions() {
         try {
-            const res = await getRequest('options');
-            if(res.data){
-                dispatch(initData(res.data.data));
-                dispatch(initOptions(res.data.options));
-                dispatch(initHelper(res.data.helper));
+            const options_fields = await getRequest('options');
+            const options_data = await getRequest('data');
+            const helper_data = await getRequest('helper_data');
 
-                console.log('DATA: ', res.data.data);
+            if( options_fields.data && options_data.data && helper_data.data){
+                dispatch(initOptions(options_fields.data));
+                dispatch(initData(options_data.data));
+                dispatch(initHelper(helper_data.data));
 
                 initAppJQuryFunction();
 
-                if(!res.data.options.length){
+                console.log("options_fields: ", options_fields.data);
+                console.log("options_data: ", options_data.data);
+                console.log("helper_data: ", helper_data.data);
+
+                if(!options_fields.data.length){
                     setStatus('empty');
                 }
             }    

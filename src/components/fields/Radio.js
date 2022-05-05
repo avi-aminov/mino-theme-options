@@ -9,7 +9,6 @@ const Radio = ({field}) => {
     const description = field.description || '';
     const example = field.example || '';
     const type = field.isNumber ? "number" : 'text';
-    const col_size = field.type ? "3" : 'box-half';
     const em = field.em || '';
     const options = field.options || [];
 
@@ -24,11 +23,11 @@ const Radio = ({field}) => {
     };
     
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id];
             setVal(value);
         }
-    }, fields_data );
+    }, [fields_data]);
 
     return(
         <div className="options-content-inner">
@@ -52,7 +51,7 @@ const Radio = ({field}) => {
                                             name={option.key} 
                                             id={option.key} 
                                         />
-                                        <span className="checkmark"></span>
+                                        <span className="checkmark"> </span>
                                     </label>
                                 );
                             })

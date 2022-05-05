@@ -25,11 +25,11 @@ const Time = ({field}) => {
     };
     
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id];
             setVal(moment(value));
         }
-    }, fields_data );
+    }, [fields_data]);
 
     return(
         <div className="options-content-inner">

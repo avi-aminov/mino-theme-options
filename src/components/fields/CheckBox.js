@@ -22,12 +22,14 @@ const Checkbox = ({field}) => {
         setVal(temp);
     };
     
-    /*
-    useEffect( () => {    
-        const value = fields_data.data[field.id].split(",");
-        setVal(value);   
+
+    useEffect( () => {
+        if(fields_data.data && fields_data.data[field.id]){
+            const value = fields_data.data[field.id].split(",");
+            setVal(value);
+        }
     }, [fields_data]);
-    */
+
 
     return(
         <div className="options-content-inner"> 
@@ -50,7 +52,7 @@ const Checkbox = ({field}) => {
                                             name={option.key} 
                                             id={option.key} 
                                         />
-                                        <span className="checkmark"></span>
+                                        <span className="checkmark"> </span>
                                     </label>
                                 );
                             })

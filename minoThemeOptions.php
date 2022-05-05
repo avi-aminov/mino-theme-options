@@ -16,6 +16,7 @@ define( 'MINO_THEME_OPTIONS_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
 define( 'MINO_THEME_OPTIONS_URL', trailingslashit(plugins_url('/', __FILE__)) );
 define( 'MINO_THEME_OPTIONS_PREFIX', 'mino_options_' );
 
+
 /**
  * Require Autoloader
  */
@@ -26,6 +27,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 $minoOB = MinoOptionsBuilder::getInstance();
 
 
-
-// DEMO DATA FOR TESTING
+/** 
+ * DEMO DATA FOR TESTING 
+ */
 include_once 'include/demo-data.php';
+
+
+
+//echo MinoOptions::get("azd_default_logo");

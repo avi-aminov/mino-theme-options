@@ -20,6 +20,7 @@ import Radio from '../fields/Radio';
 import Checkbox from '../fields/CheckBox';
 
 const DrawFieldComponents = (field) => {
+
     const setComponent = (field) => {
         switch (field.type) {
             case 'title':

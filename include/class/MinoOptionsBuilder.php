@@ -8,6 +8,8 @@ class MinoOptionsBuilder{
     private static $instance = null;
 
     private $options = [];
+    private $data = [];
+    private $helper = [];
 
     // google font default value
     public $googleFont = [
@@ -41,8 +43,16 @@ class MinoOptionsBuilder{
     // initialization options
     //public function init($options) {
     public function init() {
-        $minoRoutes = MinoRoutes::getInstance($this->options);
+
+        /**
+         * prepare data for React-App
+         */
+        $this->prepare_data();
+
+
+        MinoRoutes::getInstance($this->options, $this->data, $this->helper);
         $this->getFontType($this->options);
+
 
         if($this->googleFont['status'] && $this->googleFont['data']){
             add_action( 'wp_enqueue_scripts', [ $this, 'google_fonts' ] );
@@ -56,6 +66,80 @@ class MinoOptionsBuilder{
     public function set_fields_to_group($group_id, $args){
         $this->options[$group_id]['fields'] = $args;
     }
+
+
+    private function get_options_arr() {
+        $temp = [];
+        foreach ($this->options as $option) {
+            array_push($temp, $option);
+        }
+        return $temp;
+    }
+
+    private function get_export_options_data(){
+        $page_options = $this->get_options_arr();
+        if ($page_options > 0) {
+            foreach ($page_options as $option) {
+                if (isset($option['fields']) && count($option['fields']) > 0) {
+                    $fields = $option['fields'];
+                    foreach ($fields as $value) {
+                        if( isset($value['type'])
+                            && $value['type'] !== 'title'
+                            && $value['type'] !== 'backup')
+                        {
+                            if(get_option(MINO_THEME_OPTIONS_PREFIX.$value['id'])){
+                                $temp_data[$value['id']] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id'] );
+                            }else{
+                                $temp_data[$value['id']] = '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return base64_encode(json_encode($temp_data));
+    }
+
+    private function prepare_data(){
+        $page_options = $this->get_options_arr();
+        if ($page_options > 0) {
+            foreach ($page_options as $option) {
+                if (isset($option['fields']) && count($option['fields']) > 0) {
+                    $fields = $option['fields'];
+                    foreach ($fields as $value) {
+                        if(isset($value['type']) && $value['type'] !== 'title'){
+                            if(isset($value['type']) && $value['type'] == 'size_group'){
+                                $temp_data[$value['id']."_top"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_top" );
+                                $temp_data[$value['id']."_right"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_right" );
+                                $temp_data[$value['id']."_down"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_down" );
+                                $temp_data[$value['id']."_left"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_left" );
+                            }else{
+                                if(get_option(MINO_THEME_OPTIONS_PREFIX.$value['id'])){
+                                    $temp_data[$value['id']] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id'] );
+                                }else{
+                                    $temp_data[$value['id']] = '';
+                                }
+
+                                if($value['type'] == 'backup'){
+                                    $temp_data[$value['id']] = $this->get_export_options_data();
+                                }
+
+                                if($value['type'] == 'font'){
+                                    $temp_data[$value['id']] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id'] );
+                                    $font_opotions['fonts'] = MinoGoogleFonts::get_google_fonts_list();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $this->options = $page_options;
+        $this->data = $temp_data;
+        $this->helper = $font_opotions;
+    }
+
 
     private function getFontType(array $arr) {
         if ($arr > 0) {

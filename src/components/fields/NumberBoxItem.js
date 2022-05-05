@@ -22,12 +22,12 @@ const NumberBoxItem = ({id, top_label, placeholder}) => {
     }; 
 
     useEffect( () => {
-        if(fields_data.data[id]){
+        if(fields_data.data && fields_data.data[id]){
             const value = JSON.parse(fields_data.data[id]);
             if(value.number) setVal(value.number);
             if(value.em) setemVal(value.em);
         }
-    }, fields_data );
+    }, [fields_data] );
 
     return(
         <div className="box">

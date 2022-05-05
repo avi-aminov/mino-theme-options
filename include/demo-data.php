@@ -286,3 +286,9 @@ if(class_exists('MinoOptionsBuilder')){
     //$minoThemeOptionsBuilder->init($themeOptions);
     $minoOB->init();
 }
+
+
+
+//echo "AAA___AAA___AAA___AAA";
+
+//MinoOptions::get();

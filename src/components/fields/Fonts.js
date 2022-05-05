@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { updateData } from '../../redux/actions/data';
 
@@ -21,7 +21,7 @@ const Fonts = ({field}) => {
         if(fontUse === ''){
             setFontUse(font.use);
         }
-    }
+    };
     
     return(
         <div className="options-content-inner">

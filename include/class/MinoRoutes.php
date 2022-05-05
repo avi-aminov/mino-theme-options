@@ -10,30 +10,60 @@ class MinoRoutes{
     private static $instance = null;
 
     public $options = [];
+    private $data = [];
+    private $helper = [];
 
     /**
      * @return MinoRoutes|null
      * The object is created from within the class itself
      * only if the class has no instance.
      */
-    public static function getInstance($options): MinoRoutes {
+    public static function getInstance($options, $data, $helper): MinoRoutes {
         if (self::$instance == null) {
-            self::$instance = new MinoRoutes($options);
+            self::$instance = new MinoRoutes($options, $data, $helper);
         }
         return self::$instance;
     }
 
-    public function __construct($options){
+    public function __construct($options, $data, $helper){
         $this->options = $options;
+        $this->data = $data;
+        $this->helper = $helper;
+
         add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
     }
 
     public function create_rest_routes() {
+
+        /**
+         * get options fields
+         */
         register_rest_route( 'mino-theme-options/v1', '/options', [
             'methods' => 'GET',
-            'callback' => [ $this, 'get_options' ],
+            'callback' => [ $this, 'get_options_fields' ],
             'permission_callback' => [ $this, 'get_settings_permission' ]
         ] );
+
+
+        /**
+         * get options data
+         */
+        register_rest_route( 'mino-theme-options/v1', '/data', [
+            'methods' => 'GET',
+            'callback' => [ $this, 'get_options_data' ],
+            'permission_callback' => [ $this, 'get_settings_permission' ]
+        ] );
+
+
+        /**
+         * get Helper data
+         */
+        register_rest_route( 'mino-theme-options/v1', '/helper_data', [
+            'methods' => 'GET',
+            'callback' => [ $this, 'get_helper_data' ],
+            'permission_callback' => [ $this, 'get_settings_permission' ]
+        ] );
+
 
         register_rest_route( 'mino-theme-options/v1', '/options', [
             'methods' => 'POST',
@@ -54,49 +84,6 @@ class MinoRoutes{
             array_push($temp, $option);
         }
         return $temp;
-    }
-
-    // get options by GET
-    public function get_options_with_data(){
-        $page_options = $this->get_options_arr();
-        if ($page_options > 0) {
-            foreach ($page_options as $option) {
-                if (isset($option['fields']) && count($option['fields']) > 0) {
-                    $fields = $option['fields'];
-                    foreach ($fields as $value) {
-                        if(isset($value['type']) && $value['type'] !== 'title'){
-                            if(isset($value['type']) && $value['type'] == 'size_group'){                        
-                                $temp_data[$value['id']."_top"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_top" );
-                                $temp_data[$value['id']."_right"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_right" );
-                                $temp_data[$value['id']."_down"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_down" );
-                                $temp_data[$value['id']."_left"] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id']."_left" );
-                            }else{
-                                if(get_option(MINO_THEME_OPTIONS_PREFIX.$value['id'])){
-                                    $temp_data[$value['id']] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id'] );
-                                }else{
-                                    $temp_data[$value['id']] = '';
-                                }
-    
-                                if($value['type'] == 'backup'){
-                                    $temp_data[$value['id']] = $this->get_export_options_data();
-                                }
-    
-                                if($value['type'] == 'font'){
-                                    $temp_data[$value['id']] = get_option( MINO_THEME_OPTIONS_PREFIX.$value['id'] );
-                                    $font_opotions['fonts'] = MinoGoogleFonts::get_google_fonts_list();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        return [
-            'options'   => $page_options,
-            'data'      => $temp_data,
-            'helper'    => $font_opotions
-        ];
     }
 
     public function set_import_options_data($req) {
@@ -135,12 +122,23 @@ class MinoRoutes{
                 }
             }
         }
-        return base64_encode(json_encode($temp_data));
+        return rest_ensure_response(base64_encode(json_encode($temp_data)));
     }
 
-    public function get_options() {
-        return rest_ensure_response( $this->get_options_with_data() );
+    public function get_options_fields() {
+        return rest_ensure_response( $this->options );
     }
+
+
+    public function get_options_data() {
+        return rest_ensure_response( $this->data );
+    }
+
+
+    public function get_helper_data() {
+        return rest_ensure_response( $this->helper );
+    }
+
 
     // save options by POST 
     public function save_settings( $req ) {

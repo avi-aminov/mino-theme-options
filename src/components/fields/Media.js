@@ -16,11 +16,12 @@ const Media = ({field}) => {
     const dispatch = useDispatch();
 
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
+            console.log("Media :::: >");
             const img = fields_data.data[field.id].toString();
             setImagePath(img);
         }
-    }, fields_data );
+    }, [fields_data]);
 
     const handleInputChange = (k, v) => {
         dispatch(updateData({key:k, value:v}));
@@ -31,7 +32,7 @@ const Media = ({field}) => {
 
         // If the media frame already exists, reopen it.
         if (frame) {
-            frame.open()
+            frame.open();
             return
         }
     
@@ -58,7 +59,7 @@ const Media = ({field}) => {
 
         // Finally, open the modal on click
         frame.open();   
-    }
+    };
 
     const clearMediaPath = () => {
         handleInputChange(field.id, '');

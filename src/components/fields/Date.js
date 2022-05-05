@@ -20,11 +20,11 @@ const Date = ({field}) => {
     };
     
     useEffect( () => {
-        if(fields_data.data[field.id]){
+        if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id];
             setStartDate(new window.Date(value));
         }
-    }, fields_data );
+    }, [fields_data]);
 
     return(
         <div className="options-content-inner">
@@ -43,7 +43,7 @@ const Date = ({field}) => {
                                 dateFormat={format}
                             />
                             <span className="icon">
-                                <i className="ri-calendar-line"></i>
+                                <i className="ri-calendar-line"> </i>
                             </span>
                         </div>
                         <div className="field-description">{example}</div>
