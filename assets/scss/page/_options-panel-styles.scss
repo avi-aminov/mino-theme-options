@@ -985,6 +985,14 @@ html .ui-button.ui-state-disabled:active {
 			display: flex;
 		}
 
+		.options-content-inner .right-col.date-wrap {
+			display: block;
+
+			.box.date{
+				max-width: 150px;
+			}
+		}
+
 		.options-content-inner .right-col > .box + .box {
 			margin-left: 25px;
 		}

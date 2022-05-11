@@ -6,8 +6,85 @@ if(class_exists('MinoOptionsBuilder')){
     // Remix Icon v2.5.0
     // https://remixicon.com
 
+
+
+
     $minoOB->set_group([
-        'id' => 'azd_brand',
+        'id' => 'group-example-id',
+        'name' => 'Demo Group',
+        'icon' => 'ri-dvd-fill'
+    ]);
+
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'checkbox',
+            'label' => 'Checkbox Label',
+            'id' => 'checkbox-example-id',
+            'description' => 'Checkbox Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+            'options' => [
+                [
+                    'key' => 'checkbox_1',
+                    'value' => 'checkbox 1',
+                ],
+                [
+                    'key' => 'checkbox_2',
+                    'value' => 'checkbox 2',
+                ]
+            ]
+        ],
+        [
+            'type' => 'code',
+            'id' => 'custom-js-code',
+            'label' => 'Custom JavaScript',
+            'description' => 'Example Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'color',
+            'id' => 'color-field-example',
+            'label' => 'Color Field',
+            'description' => 'Choose your color',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'date',
+            'id' => 'date-field-example',
+            'label' => 'Date Field Label',
+            'format' => 'MM/dd/yyyy',
+            'description' => 'Date Field Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'drop_down_box',
+            'label' => 'Drop Down Box',
+            'id' => 'drop-down-box-example',
+            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+            'options' => [
+                [
+                    'key' => 'ddb_1',
+                    'value' => 'Drop Down Box 1',
+                ],
+                [
+                    'key' => 'ddb_2',
+                    'value' => 'Drop Down Box 2',
+                ],
+                [
+                    'key' => 'ddb_3',
+                    'value' => 'Drop Down Box 3',
+                ]
+            ]
+        ]
+    ]);
+
+
+
+
+
+
+    $minoOB->set_group([
+        'id' => 'azd-brand',
         'name' => 'Brand',
         'icon' => 'ri-archive-drawer-line'
     ]);
@@ -35,7 +112,7 @@ if(class_exists('MinoOptionsBuilder')){
         'icon' => 'ri-dvd-fill',
     ]);
 
-    $minoOB->set_fields_to_group('azd_brand',[
+    $minoOB->set_fields_to_group('azd-brand',[
         [
             'type' => 'title',
             'title' => 'Site Logo',

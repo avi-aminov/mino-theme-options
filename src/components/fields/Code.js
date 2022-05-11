@@ -4,11 +4,11 @@ import { updateData } from '../../redux/actions/data';
 
 const Code = ({field}) => {
 
-    const label = field.label || '';
+    const label = field.label || field.type;
     const description = field.description || '';
-    const example = field.example || '';
+    const content = field.content || '';
 
-    const [val, setVal] = useState(0);
+    const [val, setVal] = useState('');
     const fields_data = useSelector((state) => state.dataReducer);
     const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ const Code = ({field}) => {
                         <div>
                             <textarea rows="4" onChange={ handleInputChange } id={field.id} name={field.id} value={val}></textarea>
                         </div>
-                        <div className="field-description">{example}</div>
+                        <div className="field-description">{content}</div>
                     </div>  
                 </div>
             </div>

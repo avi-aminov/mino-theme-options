@@ -13,7 +13,7 @@ const TabContent = () => {
                 return (
                     <div className={(index == 0 ? ' active '  : ' disable ') + 'content-body-grid'} id={option.id} key={index}>
                         { 
-                        option.fields ? 
+                        option.fields ?
                         option.fields.map((field) => { return DrawFieldComponents( field ) }) : null
                         }
                     </div>

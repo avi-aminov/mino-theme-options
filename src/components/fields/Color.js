@@ -4,12 +4,11 @@ import { updateData } from '../../redux/actions/data';
 
 const Color = ({field}) => {
 
-    const label = field.label || '';
+    const label = field.label || field.type;
     const description = field.description || '';
-    const type = field.type || 'text';
-    const em = field.em || '';
+    const content = field.content || '';
 
-    const [val, setVal] = useState(0);
+    const [val, setVal] = useState("#ffffff");
     const fields_data = useSelector((state) => state.dataReducer);
     const dispatch = useDispatch();
 
@@ -44,7 +43,8 @@ const Color = ({field}) => {
                             />
                         </div>
                         <div className="field-description">Color: {val}</div>
-                    </div> 
+                        <div className="field-description">{ content }</div>
+                    </div>
                 </div>
             </div>
         </div>

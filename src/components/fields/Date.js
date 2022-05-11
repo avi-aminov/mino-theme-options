@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const Date = ({field}) => {
     const label = field.label || '';
     const description = field.description || '';
-    const example = field.example || '';
+    const content = field.content || '';
     const format = field.format || 'dd/MM/yyyy';
 
     const [startDate, setStartDate] = useState();
@@ -33,8 +33,8 @@ const Date = ({field}) => {
                     <h5>{label}</h5>
                     <div className="field-description">{description}</div>
                 </div>
-                <div className="right-col">
-                    <div className="box">
+                <div className="right-col date-wrap">
+                    <div className="box date">
                         <div className="date-time-holder">
                             <label for="">Date</label>
                             <DatePicker 
@@ -46,8 +46,9 @@ const Date = ({field}) => {
                                 <i className="ri-calendar-line"> </i>
                             </span>
                         </div>
-                        <div className="field-description">{example}</div>
+
                     </div>
+                    <div className="field-description">{content}</div>
                 </div>
             </div>
         </div>

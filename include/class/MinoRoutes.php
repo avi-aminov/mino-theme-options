@@ -13,10 +13,12 @@ class MinoRoutes{
     private $data = [];
     private $helper = [];
 
+
     /**
-     * @return MinoRoutes|null
-     * The object is created from within the class itself
-     * only if the class has no instance.
+     * @param $options
+     * @param $data
+     * @param $helper
+     * @return MinoRoutes
      */
     public static function getInstance($options, $data, $helper): MinoRoutes {
         if (self::$instance == null) {
@@ -126,7 +128,11 @@ class MinoRoutes{
     }
 
     public function get_options_fields() {
-        return rest_ensure_response( $this->options );
+
+        $response = new WP_REST_Response();
+        $response->set_data($this->options);
+        $response = rest_ensure_response($response);
+        return $response;
     }
 
 

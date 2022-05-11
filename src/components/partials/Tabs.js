@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 const Tabs = () => {
     const options = useSelector((state) => state.optionsReducer);
 
-    console.log("options:::::", options);
-
     return(
         <div className="option-tab-header">
             <ul>
@@ -13,13 +11,14 @@ const Tabs = () => {
                 options.options ? 
                 options.options.map((option, index) => {
                     const icon = option.icon || 'ri-stack-line';
+                    const name = option.name || 'Group';
                     return (
                         <li key={index}>
                             <a className={(index == 0 ? "current" : "")} href={"#"+option.id}> 
                                 <span className="icon">
                                     <i className={icon}></i>
                                 </span>
-                                {option.name}
+                                {name}
                             </a>
                         </li>
                     );

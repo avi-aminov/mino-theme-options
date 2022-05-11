@@ -4,10 +4,9 @@ import { updateData } from '../../redux/actions/data';
 
 const Checkbox = ({field}) => {
 
-    const placeholder = field.placeholder || '';
-    const label = field.label || '';
+    const label = field.label || field.type;
     const description = field.description || '';
-    const example = field.example || '';
+    const content = field.content || '';
     const options = field.options || [];
 
     const [val, setVal] = useState([]);
@@ -57,7 +56,7 @@ const Checkbox = ({field}) => {
                                 );
                             })
                         }
-                        <div className="field-description">This area for field description</div>
+                        <div className="field-description">{ content }</div>
                     </div>
                 </div>
             </div>

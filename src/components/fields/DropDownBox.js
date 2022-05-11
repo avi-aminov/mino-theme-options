@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateData } from '../../redux/actions/data';
 
 const DropDownBox = ({field}) => {
-    const label = field.label || '';
+    const label = field.label || 'Drop Down Box';
     const description = field.description || '';
+    const content = field.content || '';
     const options = field.options || null;
 
     const [val, setVal] = useState(0);
@@ -28,11 +29,13 @@ const DropDownBox = ({field}) => {
             <div className="grid">
                 <div className="left-col">
                     <h5>{label}</h5>
+                    <div className="field-description">{description}</div>
                 </div>
                 <div className="right-col">
                     <div className="box">
                         <select onChange={(e) => {handleInputChange(e.target.value)}} name={field.id} id={field.id} className="general-select">
                         {
+                            options ?
                             options.map((option) => {
                                 return (
                                     <option value={option.key} selected={val === option.key}>
@@ -40,12 +43,11 @@ const DropDownBox = ({field}) => {
                                     </option>
                                 );
                             })
+                            : null
                         }
                         </select>
-                        <br />
-                        <br />
-                        <label for="files">{description}</label>
-                    </div>  
+                        <div className="field-description">{content}</div>
+                    </div>
                 </div>
             </div>
         </div>
