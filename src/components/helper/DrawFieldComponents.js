@@ -15,7 +15,6 @@ import Exporter from '../fields/exporter';
 import Fonts from '../fields/Fonts';
 import Date from '../fields/Date';
 import Time from '../fields/Time';
-//import Checkbox from '../fields/Checkbox';
 import Radio from '../fields/Radio';
 import Checkbox from '../fields/CheckBox';
 
@@ -24,39 +23,39 @@ const DrawFieldComponents = (field) => {
     const setComponent = (field) => {
         switch (field.type) {
             case 'title':
-                return <Title field={field} />
+                return <Title field={field} />;
             case 'media':
-                return <Media field={field} />
+                return <Media field={field} />;
             case 'text':
-                return <TextInput field={field} /> 
+                return <TextInput field={field} />;
             case 'number':
-                return <Number field={field} /> 
+                return <Number field={field} />;
             case 'switch':
-                return <Switch field={field} /> 
+                return <Switch field={field} />;
             case 'textarea':
-                return <TextArea field={field} /> 
+                return <TextArea field={field} />;
             case 'select_box':
-                return <SelectBox field={field} /> 
+                return <SelectBox field={field} />;
             case 'drop_down_box':
-                return <DropDownBox field={field} /> 
+                return <DropDownBox field={field} />;
             case 'size_group':
-                return <SizeGroup field={field} /> 
+                return <SizeGroup field={field} />;
             case 'color':
-                return <Color field={field} /> 
+                return <Color field={field} />;
             case 'code':
-                return <Code field={field} /> 
+                return <Code field={field} />;
             case 'backup':
-                return <Exporter field={field} /> 
+                return <Exporter field={field} />;
             case 'font':
-                return <Fonts field={field}/>     
+                return <Fonts field={field}/>;
             case 'date':
-                return <Date field={field}/>        
+                return <Date field={field}/>;
             case 'time':
-                return <Time field={field}/>                    
+                return <Time field={field}/>;
             case 'radio':
-                return <Radio field={field}/>    
+                return <Radio field={field}/>;
             case 'checkbox':
-                return <Checkbox field={field}/>  
+                return <Checkbox field={field}/>;
             default:
                 break;
         }
