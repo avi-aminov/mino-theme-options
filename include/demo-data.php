@@ -75,7 +75,37 @@ if(class_exists('MinoOptionsBuilder')){
                     'value' => 'Drop Down Box 3',
                 ]
             ]
-        ]
+        ],
+        [
+            'type' => 'backup',
+            'id' => 'backup-example',
+            'import_label' => 'Backup Import Label',
+            'export_label' => 'Backup Export Label',
+            'import_description' => 'Backup Import Description',
+            'export_description' => 'Backup Export Description',
+            'import_content' => 'Backup Import Content',
+            'export_content' => 'Backup Export Content'
+        ],
+        [
+            'type' => 'font',
+            'id' => 'fonts-example',
+            'description' => "Google Font Description",
+            'content' => 'Google Font Content',
+        ],
+        [
+            'type' => 'media',
+            'id' => 'media-example',
+            'label' => 'Default Logo',
+            'description' => 'Upload your default logo here. If you not upload, then site title will load in this logo location.',
+            'placeholder' => 'Upload your default logo',
+            'content' => 'Media Content'
+        ],
+        [
+            'type' => 'number',
+            'id' => 'number-example',
+            'label' => 'Number Label',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been'
+        ],
     ]);
 
 

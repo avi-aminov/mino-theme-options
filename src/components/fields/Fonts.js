@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateData } from '../../redux/actions/data';
 
 const Fonts = ({field}) => {
-    const label = field.label || '';
-    
+
+    const description = field.description || '';
+    const content = field.content || '';
+
     const [fontUse, setFontUse] = useState(''); 
 
     const fields_helper = useSelector((state) => state.helperReducer);
@@ -27,7 +29,8 @@ const Fonts = ({field}) => {
         <div className="options-content-inner">
             <div className="grid">
                 <div className="left-col">
-                    <h5>{label}</h5>
+                    <h5>Google Font</h5>
+                    <div className="field-description">{description}</div>
                 </div>
                 <div className="right-col">
                     <div className="box">
@@ -52,7 +55,8 @@ const Fonts = ({field}) => {
                     }
                         <br />
                         <br />
-                        <label for="files"> Use example: {fontUse} </label>
+                        <label for="files"> Use example: <span className="text-primary">{fontUse}</span> </label>
+                        <div className="field-description">{content}</div>
                     </div>  
                 </div>
             </div>

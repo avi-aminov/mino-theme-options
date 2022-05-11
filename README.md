@@ -125,8 +125,6 @@ Arguments
 
 Default color #ffffff
 
-
-
 ## _Date_
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/date-field-output-result.png)
@@ -134,7 +132,7 @@ Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoOB->set_fields_to_group('group-example-id',[
-[
+        [
             'type' => 'date',
             'id' => 'date-field-example',
             'label' => 'Date Field Label',
@@ -155,6 +153,158 @@ Arguments
 | description | No |  | Description of the Field. Shown below the field title |
 | content | No |  | Content text of the Field. |
 
+## _Drop Down Box_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/ddb-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'drop_down_box',
+            'id' => 'drop-down-box-example',
+            'label' => 'Drop Down Box',
+            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+            'options' => [
+                [
+                    'key' => 'ddb_1',
+                    'value' => 'Drop Down Box 1',
+                ],
+                [
+                    'key' => 'ddb_2',
+                    'value' => 'Drop Down Box 2',
+                ],
+                [
+                    'key' => 'ddb_3',
+                    'value' => 'Drop Down Box 3',
+                ]
+            ]
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (drop_down_box) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| label | No | Drop Down Box | Label of the field. |
+| description | No |  | Description of the Field. Shown below the field title |
+| content | No |  | Content text of the Field. |
+| options | No |  | Oprions (key -> value) of drop_down_box fields |
+
+
+## _Backup_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/backup-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'backup',
+            'id' => 'backup-example',
+            'import_label' => 'Backup Import Label',
+            'export_label' => 'Backup Export Label',
+            'import_description' => 'Backup Import Description',
+            'export_description' => 'Backup Export Description',
+            'import_content' => 'Backup Import Content',
+            'export_content' => 'Backup Export Content'
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (backup) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| import_label | No | Import | Import Label of the field. |
+| export_label | No | Export | Export Label of the field. |
+| import_description | No |  | Description of Import the Field. Shown below the Import field title |
+| export_description | No |  | Description of Export the Field. Shown below the Export field title |
+| import_content | No |  | Content text of the Import Field. |
+| export_content | No |  | Content text of the Export Field. |
+
+
+
+## _Google Fonts_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/google-fonts-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'font',
+            'id' => 'fonts-example',
+            'description' => "Google Font Description",
+            'content' => 'Google Font Content',
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (font) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| content | No |  | Content text of the Field. |
+
+
+## _Media_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/media-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'media',
+            'id' => 'media-example',
+            'label' => 'Default Logo',
+            'description' => 'Upload your default logo here. If you not upload, then site title will load in this logo location.',
+            'placeholder' => 'Upload your default logo',
+            'content' => 'Media Content'
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (media) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| placeholder | No |  | placeholder on media input field |
+| content | No |  | Content text of the Field. |
+
+
+## _Number_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'number',
+            'id' => 'number-example',
+            'label' => 'Number Label',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (number) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | Number | Label of the field. |
 
 
 
@@ -165,6 +315,8 @@ Arguments
 
 
 
+
+================================================================================
 As [John Gruber] writes on the [Markdown site][df1]
 
 > The overriding design goal for Markdown's
@@ -179,16 +331,3 @@ MIT
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [Remix Icon]: <https://remixicon.com/>
-
-
-
-
-npm install
-
-composer install
-
-npm start
-
-
-// after add new php class need run this line
-composer dump-autoload -o 

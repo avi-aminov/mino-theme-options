@@ -4,8 +4,12 @@ import { postRequest } from '../../services/Api';
 
 const Exporter = ({field}) => {
 
-    const label = field.label || '';
-    const description = field.description || '';
+    const import_label = field.import_label || 'Import';
+    const export_label = field.export_label || 'Export';
+    const import_description = field.import_description || '';
+    const export_description = field.export_description || '';
+    const import_content = field.import_content || '';
+    const export_content = field.export_content || '';
 
     const [importData, setImportData] = useState("");
     const fields_data = useSelector((state) => state.dataReducer);
@@ -49,7 +53,8 @@ const Exporter = ({field}) => {
             <div className="options-content-inner">
                 <div className="grid">
                     <div className="left-col">
-                        <h5>Import</h5>
+                        <h5>{import_label}</h5>
+                        <div className="field-description">{import_description}</div>
                     </div>
                     <div className="right-col">
                         <div className="box textarea-fullwidth">
@@ -57,17 +62,17 @@ const Exporter = ({field}) => {
                                 <textarea rows="4" onChange={handleImportBackup} id={field.id} name={field.id} value={importData}></textarea>
                             </div>
                             <button onClick={setImportBackup} type="button" className="btn btn-success">Import a Backup</button>
-                            <div className="options-filed-label" htmlFor={field.id}>
-                                {description}
-                            </div>
-                        </div>  
+                            <div className="field-description">{import_content}</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div className="options-content-inner">
                 <div className="grid">
                     <div className="left-col">
-                        <h5>Export</h5>
+                        <h5>{export_label}</h5>
+                        <div className="field-description">{export_description}</div>
                     </div>
                     <div className="right-col">
                         <div className="box textarea-fullwidth">
@@ -80,7 +85,8 @@ const Exporter = ({field}) => {
                                 }
                             </div>
                             <button onClick={exportAndDownloadBackup} type="button" className="btn btn-success">Export and Download Backup</button>
-                        </div>  
+                            <div className="field-description">{export_content}</div>
+                        </div>
                     </div>
                 </div>
             </div>

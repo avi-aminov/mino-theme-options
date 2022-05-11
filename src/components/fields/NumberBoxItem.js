@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { updateData } from '../../redux/actions/data';
 
-const NumberBoxItem = ({id, top_label, placeholder}) => {
+const NumberBoxItem = ({id, placeholder}) => {
 
     const [val, setVal] = useState(0);
     const [emVal, setemVal] = useState('px');
@@ -31,7 +31,7 @@ const NumberBoxItem = ({id, top_label, placeholder}) => {
 
     return(
         <div className="box">
-            <label for="margin-top">{top_label}</label>
+            <label for="margin-top">&nbsp;</label>
             <div className="select-inside-input">
                 <input placeholder={placeholder} onChange={ handleInputChange } 
                         type="number" id={id} name={id} value={val} />

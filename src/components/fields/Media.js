@@ -10,14 +10,14 @@ const Media = ({field}) => {
     const placeholder = field.placeholder || '';
     const label = field.label || '';
     const description = field.description || '';
-    
+    const content = field.content || '';
+
     const [imagePath, setImagePath] = useState('');
     const fields_data = useSelector((state) => state.dataReducer);
     const dispatch = useDispatch();
 
     useEffect( () => {
         if(fields_data.data && fields_data.data[field.id]){
-            console.log("Media :::: >");
             const img = fields_data.data[field.id].toString();
             setImagePath(img);
         }
@@ -95,6 +95,7 @@ const Media = ({field}) => {
                                 : "" 
                             }
                         </div>
+                        <div className="field-left-description">{ content }</div>
                     </div>  
                 </div>
             </div>

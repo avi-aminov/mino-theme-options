@@ -4,10 +4,9 @@ import NumberBoxItem from './NumberBoxItem';
 const Number = ({field}) => {
 
     const placeholder = field.placeholder || '';
-    const label = field.label || '';
-    const top_label = field.top_label || '';
+    const label = field.label || 'Number';
     const description = field.description || '';
-    const em = field.em || null;
+    const content = field.content || null;
     // need add em by client 
 
     return(
@@ -19,12 +18,12 @@ const Number = ({field}) => {
                 </div>
                 <div className="right-col">
                     <NumberBoxItem 
-                        id={field.id} 
-                        top_label={top_label} 
+                        id={field.id}
                         placeholder={placeholder} 
                     />
                 </div>
             </div>
+
         </div>
     )
 };

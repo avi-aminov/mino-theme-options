@@ -36,8 +36,8 @@ const Date = ({field}) => {
                 <div className="right-col date-wrap">
                     <div className="box date">
                         <div className="date-time-holder">
-                            <label for="">Date</label>
-                            <DatePicker 
+                            <label for="">&nbsp;</label>
+                            <DatePicker
                                 selected={startDate} 
                                 onChange={(date) => handleInputChange(date)} 
                                 dateFormat={format}
