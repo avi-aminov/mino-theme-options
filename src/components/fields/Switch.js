@@ -6,6 +6,7 @@ const Switch = ({field}) => {
 
     const label = field.label || '';
     const description = field.description || '';
+    const content = field.content || '';
 
     const [val, setVal] = useState(false);
     const fields_data = useSelector((state) => state.dataReducer);
@@ -31,7 +32,7 @@ const Switch = ({field}) => {
                     <h5>{label}</h5>
                     <div className="field-description">{description}</div>
                 </div>
-                <div className="right-col">
+                <div className="right-col d-block">
                     <div className="box">
                         <label className="switch">
                             <input type="checkbox" id={field.id}
@@ -40,7 +41,9 @@ const Switch = ({field}) => {
                             <span className="slider round"></span>
                         </label>
                     </div>
+                    <div className="field-description">{content}</div>
                 </div>
+
             </div>
         </div>
     )

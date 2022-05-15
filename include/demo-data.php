@@ -106,6 +106,85 @@ if(class_exists('MinoOptionsBuilder')){
             'label' => 'Number Label',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been'
         ],
+        [
+            'type' => 'radio',
+            'label' => 'Radio Label',
+            'id' => 'radio-example',
+            'description' => 'Radio Description',
+            'content' => 'Radio Content',
+            'options' => [
+                [
+                    'key' => 'radio_1',
+                    'value' => 'radio 1',
+                ],
+                [
+                    'key' => 'radio 2',
+                    'value' => 'radio 2',
+                ]
+            ]
+        ],
+        [
+            'type' => 'select_box',
+            'label' => 'Select Header',
+            'id' => 'zad_select_header_99',
+            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            "scaling" => 'vertical',
+            'options' => [
+                [
+                    'key' => 'hedaer_1',
+                    'value' => 'Header 1',
+                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-5.png'
+                ],
+                [
+                    'key' => 'hedaer_2',
+                    'value' => 'Header 1',
+                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-2.png'
+                ],
+                [
+                    'key' => 'hedaer_3',
+                    'value' => 'Header 3',
+                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-1.png'
+                ],
+                [
+                    'key' => 'hedaer_4',
+                    'value' => 'Header 4',
+                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-4.png'
+                ],
+                [
+                    'key' => 'hedaer_5',
+                    'value' => 'Header 5',
+                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-6.png'
+                ]
+            ]
+        ],
+        [
+            'type' => 'size_group',
+            'label' => 'Size Group Label',
+            'id' => 'size-group-example',
+            'description' => 'output example: 10px 10px 10px 10px',
+        ],
+        [
+            'id' => 'switch-example',
+            'type' => 'switch',
+            'label' => 'switch example',
+            'description' => 'switch description example',
+            'content' => 'switch content example',
+        ],
+        [
+            'type' => 'textarea',
+            'label' => 'Textarea',
+            'id' => 'textarea-example',
+            'description' => 'Textarea description example',
+            'content' => 'Textarea content example',
+            'size' => 'full'
+        ],
+        [
+            'type' => 'time',
+            'label' => 'Time Label',
+            'id' => 'time-example',
+            'description' => 'Time description example',
+            'content' => 'Time content example',
+        ]
     ]);
 
 

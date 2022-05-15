@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateData } from '../../redux/actions/data';
 
 const SelectBox = ({field}) => {
+
     const label = field.label || '';
     const description = field.description || '';
     const options = field.options || null;
@@ -22,9 +23,16 @@ const SelectBox = ({field}) => {
     };
     
     useEffect( () => {
+
+
+
         if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id].toString();
             setVal(value);
+
+            console.log("AVI ", fields_data.data);
+            console.log("field ", field.id);
+            
         }
     }, [fields_data]);
 

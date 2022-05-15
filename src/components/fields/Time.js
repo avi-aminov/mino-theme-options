@@ -6,11 +6,9 @@ import TimePicker from 'rc-time-picker';
 import 'rc-time-picker/assets/index.css';
 
 const Time = ({field}) => {
-
-    const placeholder = field.placeholder || '';
-    const label = field.label || '';
+    const label = field.label || field.type;
     const description = field.description || '';
-    const example = field.example || '';
+    const content = field.content || '';
     const second = field.second || true;
 
     const str = second ? 'HH:mm:ss' : 'HH:mm';
@@ -41,14 +39,14 @@ const Time = ({field}) => {
                 <div className="right-col">
                     <div className="box">
                         <div className="date-time-holder">
-                            <label for="">Time</label>
+                            <label for="">&nbsp;</label>
                             <TimePicker
                                 showSecond={second}
                                 onChange={handleInputChange}
                                 value={val}
                             />
                         </div>
-                        <div className="field-description">{example}</div>
+                        <div className="field-description">{content}</div>
                     </div>
                 </div>
             </div>

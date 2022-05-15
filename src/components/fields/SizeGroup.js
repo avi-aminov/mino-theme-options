@@ -2,11 +2,8 @@ import React from 'react';
 import NumberBoxItem from './NumberBoxItem';
 
 const SizeGroup = ({field}) => {
-    const placeholder = field.placeholder || '';
-    const label = field.label || '';
-    const top_label = field.top_label || '';
+    const label = field.label || field.type;
     const description = field.description || '';
-    const em = field.em || null;
     
     return(
             <div className="options-content-inner">
@@ -17,29 +14,21 @@ const SizeGroup = ({field}) => {
                 </div>
                 <div className="right-col">
 
-                    <NumberBoxItem 
-                        id={field.id+"_top"} 
-                        top_label={top_label} 
-                        placeholder={placeholder} 
+                    <NumberBoxItem
+                        id={field.id+"_top"}
                     />
 
-                    <NumberBoxItem 
-                        id={field.id+"_right"} 
-                        top_label={top_label} 
-                        placeholder={placeholder} 
+                    <NumberBoxItem
+                        id={field.id+"_right"}
                     />
 
-                    <NumberBoxItem 
-                        id={field.id+"_down"} 
-                        top_label={top_label} 
-                        placeholder={placeholder} 
+                    <NumberBoxItem
+                        id={field.id+"_down"}
                     />
 
-                    <NumberBoxItem 
-                        id={field.id+"_left"} 
-                        top_label={top_label} 
-                        placeholder={placeholder} 
-                    /> 
+                    <NumberBoxItem
+                        id={field.id+"_left"}
+                    />
 
                 </div>
             </div>     

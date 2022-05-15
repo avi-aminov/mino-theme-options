@@ -6,7 +6,8 @@ const TextArea = ({field}) => {
 
     const label = field.label || '';
     const description = field.description || '';
-    // need add textarea-fullwidth 
+    const content = field.content || '';
+    const size = field.size && field.size === 'full' ? "textarea-fullwidth" :  'textarea-half';
 
 
     const [val, setVal] = useState("");
@@ -31,13 +32,14 @@ const TextArea = ({field}) => {
             <div className="grid">
                 <div className="left-col">
                     <h5>{label}</h5>
+                    <div className="field-description">{description}</div>
                 </div>
                 <div className="right-col">
-                    <div className="box textarea-half">
+                    <div className={"box " + size}>
                         <div>
                             <textarea rows="4" onChange={ handleInputChange } id={field.id} name={field.id} value={val}></textarea>
                         </div>
-                        <div className="field-description">{description}</div>
+                        <div className="field-description">{content}</div>
                     </div>  
                 </div>
             </div>

@@ -1,7 +1,7 @@
 # MinoPress
 ## _Mino Theme Options Framwork_
 
-This free theme options framework developed client side using:
+This WordPress Plugin Theme Options Framework developed client side using:
 `React.JS and Redux`
 `Bootstrap 5`
 
@@ -307,27 +307,175 @@ Arguments
 | label | No | Number | Label of the field. |
 
 
+## _Radio_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/radio-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'radio',
+            'label' => 'Radio Label',
+            'id' => 'radio-example',
+            'description' => 'Radio Description',
+            'content' => 'Radio Content',
+            'options' => [
+                [
+                    'key' => 'radio_1',
+                    'value' => 'radio 1',
+                ],
+                [
+                    'key' => 'radio 2',
+                    'value' => 'radio 2',
+                ]
+            ]
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (radio) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| label | No | radio | Label of the field. |
+| description | No |  | Description of the Field. Shown below the field title |
+| content | No |  | Content text of the Field. |
+
+
+## _SelectBox_  ::TODO::
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'number',
+            'id' => 'number-example',
+            'label' => 'Number Label',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (number) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | Number | Label of the field. |
+| content | No |  | Content text of the Field. |
+
+
+
+## _Size Group_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/Size-Group-field-output-result.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'size_group',
+            'id' => 'size-group-example',
+            'label' => 'Size Group Label',
+            'description' => 'output example: 10px 10px 10px 10px',
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (size_group) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | size_group | Label of the field. |
+
+## _Switch_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/switcher-field-output-result-e1652637572985.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'id' => 'switch-example',
+            'type' => 'switch',
+            'label' => 'switch example',
+            'description' => 'switch description example',
+            'content' => 'switch content example',
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (switch) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | switch | Label of the field. |
+| content | No |  | Content text of the Field. |
+
+
+## _Textarea_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/textArea-1-e1652638788888.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'textarea',
+            'label' => 'Textarea',
+            'id' => 'textarea-example',
+            'description' => 'Textarea description example',
+            'content' => 'Textarea content example',
+            'size' => 'full'
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (textarea) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | textarea | Label of the field. |
+| content | No |  | Content text of the Field. |
+| size | No |  half | size of textarea half or full. |
 
 
 
 
+## _Time_
+Field output result
+![N|Solid](https://minopress.com/wp-content/uploads/2022/05/Screen-Shot-2022-05-15-at-21.28.28-e1652639338265.png)
+Add code field to group id for example: `group-example-id`
+```sh
+if(class_exists('MinoOptionsBuilder')){
+    $minoOB->set_fields_to_group('group-example-id',[
+        [
+            'type' => 'time',
+            'label' => 'Time Label',
+            'id' => 'time-example',
+            'description' => 'Time description example',
+            'content' => 'Time content example',
+        ]
+    ]);
+}
+```
+Arguments
+| Name (Key) | Mandatory | Default | Description |
+| ------ | ------ | ------ | ------ |
+| type | Yes | | field type (time) |
+| id | Yes | | A unique ID. This ID will be used to get the value.|
+| description | No |  | Description of the Field. Shown below the field title |
+| label | No | time | Label of the field. |
+| content | No |  | Content text of the Field. |
 
-
-
-
-
-================================================================================
-As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-
-## License
-
-MIT
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [Remix Icon]: <https://remixicon.com/>

@@ -4,12 +4,9 @@ import { updateData } from '../../redux/actions/data';
 
 const Radio = ({field}) => {
 
-    const placeholder = field.placeholder || '';
     const label = field.label || '';
     const description = field.description || '';
-    const example = field.example || '';
-    const type = field.isNumber ? "number" : 'text';
-    const em = field.em || '';
+    const content = field.content || '';
     const options = field.options || [];
 
     const [val, setVal] = useState('');
@@ -57,7 +54,7 @@ const Radio = ({field}) => {
                             })
                         }
                         
-                        <div className="field-description">This area for field description</div>
+                        <div className="field-description">{content}</div>
                     </div> 
                 </div>
             </div>
