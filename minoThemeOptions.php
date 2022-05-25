@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Mino Theme Options FrameWork
+ * Plugin Name: Mino Theme Options Framework
  * Plugin URI: https://minopress.com
  * Description: Theme Options FrameWork.
  * Version: 1.0.0
@@ -26,12 +26,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 // create instance of builder class
 $minoOB = MinoOptionsBuilder::getInstance();
 
-
 /** 
  * DEMO DATA FOR TESTING 
  */
-include_once 'include/demo-data.php';
-
-
-
-//echo MinoOptions::get("azd_default_logo");
+//include_once 'include/demo-data.php';

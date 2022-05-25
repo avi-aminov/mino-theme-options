@@ -20,19 +20,21 @@ class MinoRoutes{
      * @param $helper
      * @return MinoRoutes
      */
-    public static function getInstance($options, $data, $helper): MinoRoutes {
+    public static function getInstance(): MinoRoutes {
         if (self::$instance == null) {
-            self::$instance = new MinoRoutes($options, $data, $helper);
+            self::$instance = new MinoRoutes();
         }
         return self::$instance;
     }
 
-    public function __construct($options, $data, $helper){
+    public function __construct(){
+        add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
+    }
+
+    public function setParams($options, $data, $helper){
         $this->options = $options;
         $this->data = $data;
         $this->helper = $helper;
-
-        add_action( 'rest_api_init', [ $this, 'create_rest_routes' ] );
     }
 
     public function create_rest_routes() {

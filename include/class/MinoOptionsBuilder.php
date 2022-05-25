@@ -32,6 +32,8 @@ class MinoOptionsBuilder{
 
     public function __construct(){
 
+        MinoRoutes::getInstance();
+
         // add scripts only on this plugin page
         if($this->isThisPage()){
             add_action( 'admin_enqueue_scripts', [ $this, 'mino_include_scripts' ]);
@@ -48,9 +50,6 @@ class MinoOptionsBuilder{
          * prepare data for React-App
          */
         $this->prepare_data();
-
-
-        MinoRoutes::getInstance($this->options, $this->data, $this->helper);
         $this->getFontType($this->options);
 
 
@@ -102,6 +101,8 @@ class MinoOptionsBuilder{
 
     private function prepare_data(){
         $page_options = $this->get_options_arr();
+        $font_opotions = [];
+        $temp_data = [];
         if ($page_options > 0) {
             foreach ($page_options as $option) {
                 if (isset($option['fields']) && count($option['fields']) > 0) {
