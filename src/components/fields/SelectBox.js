@@ -4,6 +4,7 @@ import { updateData } from '../../redux/actions/data';
 
 const SelectBox = ({field}) => {
 
+
     const label = field.label || '';
     const description = field.description || '';
     const options = field.options || null;
@@ -24,27 +25,23 @@ const SelectBox = ({field}) => {
     
     useEffect( () => {
 
-
-
         if(fields_data.data && fields_data.data[field.id]){
             const value = fields_data.data[field.id].toString();
             setVal(value);
-
-            console.log("AVI ", fields_data.data);
-            console.log("field ", field.id);
-            
         }
+
     }, [fields_data]);
 
     return(
         <div className="options-content-inner">
             <div className="grid">
                 <div className="left-col">
-                    <h5>Select demo</h5>
+                    <h5>{label}</h5>
+                    <div className="field-description">{description}</div>
                 </div>
                 <div className={ scaling + " right-col" }>
                 {
-                    val ? 
+                    options ?
                     options.map((option) => {
                         return (
                             <div className="box image-select">
@@ -56,7 +53,7 @@ const SelectBox = ({field}) => {
                                         type="radio"  
                                         name={field.id} 
                                     />
-                                    {option.img ? <img src={option.img} /> : option.value }
+                                    { option.img ? <img src={option.img} /> : option.value }
                                     <span className="checkmark"></span>
                                 </label>
                             </div> 

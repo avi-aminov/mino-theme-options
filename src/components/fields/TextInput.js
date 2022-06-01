@@ -7,10 +7,9 @@ const TextInput = ({field}) => {
     const placeholder = field.placeholder || '';
     const label = field.label || '';
     const description = field.description || '';
-    const example = field.example || '';
+    const content = field.content || '';
     const type = field.isNumber ? "number" : 'text';
-    const col_size = field.type ? "3" : 'box-half';
-    const em = field.em || '';
+    const size = field.size && field.size === 'full' ? "textarea-fullwidth" :  'textarea-half';
 
     const [val, setVal] = useState('');
     const fields_data = useSelector((state) => state.dataReducer);
@@ -37,10 +36,10 @@ const TextInput = ({field}) => {
                     <div className="field-description">{description}</div>
                 </div>
                 <div className="right-col">
-                    <div className="box box-half">
-                        <label for="header-slogan">Header slogan</label>
+                    <div className={"box " + size}>
+                        <label for="header-slogan">{ '' }</label>
                         <input onChange={ handleInputChange } id={field.id} name={field.id} value={val} type={type} placeholder= {placeholder} />
-                        <div className="field-description">{example}</div>
+                        <div className="field-description">{content}</div>
                     </div>  
                 </div>
             </div>

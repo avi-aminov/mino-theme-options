@@ -24,9 +24,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 // create instance of builder class
-$minoOB = MinoOptionsBuilder::getInstance();
+$minoThemeOptions = MinoOptionsBuilder::getInstance();
 
 /** 
  * DEMO DATA FOR TESTING 
  */
-//include_once 'include/demo-data.php';
+include_once 'include/demo-data.php';

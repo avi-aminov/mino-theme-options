@@ -7,6 +7,8 @@ class MinoOptionsBuilder{
      */
     private static $instance = null;
 
+    private $MinoRoutes;
+
     private $options = [];
     private $data = [];
     private $helper = [];
@@ -32,7 +34,7 @@ class MinoOptionsBuilder{
 
     public function __construct(){
 
-        MinoRoutes::getInstance();
+        $this->MinoRoutes = MinoRoutes::getInstance();
 
         // add scripts only on this plugin page
         if($this->isThisPage()){
@@ -52,6 +54,7 @@ class MinoOptionsBuilder{
         $this->prepare_data();
         $this->getFontType($this->options);
 
+        $this->MinoRoutes->setParams($this->options, $this->data, $this->helper);
 
         if($this->googleFont['status'] && $this->googleFont['data']){
             add_action( 'wp_enqueue_scripts', [ $this, 'google_fonts' ] );
@@ -65,7 +68,6 @@ class MinoOptionsBuilder{
     public function set_fields_to_group($group_id, $args){
         $this->options[$group_id]['fields'] = $args;
     }
-
 
     private function get_options_arr() {
         $temp = [];

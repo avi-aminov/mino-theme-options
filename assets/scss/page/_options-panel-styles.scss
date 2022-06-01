@@ -985,6 +985,17 @@ html .ui-button.ui-state-disabled:active {
 			display: flex;
 		}
 
+		.options-content-inner .right-col.grid-3 {
+			display: grid;
+			-ms-grid-columns: 220px 220px 220px;
+			grid-template-columns: 220px 220px 220px;
+			-ms-grid-rows: 60px auto 60px;
+			grid-template-rows: 60px auto 60px;
+			-moz-column-gap: 10px;
+			column-gap: 10px;
+			row-gap: 20px;
+		}
+
 		.options-content-inner .right-col.date-wrap {
 			display: block;
 
@@ -997,7 +1008,9 @@ html .ui-button.ui-state-disabled:active {
 			margin-left: 25px;
 		}
 
-
+		.options-content-inner .right-col.grid-3 > .box + .box {
+			margin-left: 0;
+		}
 
 		.options-content-inner .vertical-box > .box + .box {
 		    margin-left: 0;

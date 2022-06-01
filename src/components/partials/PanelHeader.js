@@ -13,7 +13,7 @@ const PanelHeader = ({loader}) => {
             <div className="header-info">
                 <div className="text">
                     <p>MinoPress Theme Options,
-                        <a className='doc-link' href='#'>See full Documentions</a>
+                        <a className='doc-link' target='_blank' href='https://github.com/avi-aminov/mino-theme-options'> See full Documentions</a>
                     </p>
                 </div>
                 <div className="btns">

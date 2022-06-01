@@ -17,7 +17,7 @@ This WordPress Plugin Theme Options Framework developed client side using:
 Before creating fields you need to create a group
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_group([
+    $minoThemeOptions->set_group([
         'id' => 'group-example-id',
         'name' => 'Example Group',
         'icon' => 'ri-archive-drawer-line'
@@ -38,7 +38,7 @@ Field output result
 Add checkbox field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'checkbox',
             'id' => 'checkbox-example-id',
@@ -76,7 +76,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'code',
             'id' => 'custom-js-code',
@@ -103,7 +103,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'color',
             'id' => 'color-field-example',
@@ -131,7 +131,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'date',
             'id' => 'date-field-example',
@@ -159,7 +159,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'drop_down_box',
             'id' => 'drop-down-box-example',
@@ -201,7 +201,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'backup',
             'id' => 'backup-example',
@@ -235,7 +235,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'font',
             'id' => 'fonts-example',
@@ -260,7 +260,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'media',
             'id' => 'media-example',
@@ -288,7 +288,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'number',
             'id' => 'number-example',
@@ -313,7 +313,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'radio',
             'label' => 'Radio Label',
@@ -350,7 +350,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'number',
             'id' => 'number-example',
@@ -377,7 +377,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'size_group',
             'id' => 'size-group-example',
@@ -401,7 +401,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'id' => 'switch-example',
             'type' => 'switch',
@@ -428,7 +428,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'textarea',
             'label' => 'Textarea',
@@ -459,7 +459,7 @@ Field output result
 Add code field to group id for example: `group-example-id`
 ```sh
 if(class_exists('MinoOptionsBuilder')){
-    $minoOB->set_fields_to_group('group-example-id',[
+    $minoThemeOptions->set_fields_to_group('group-example-id',[
         [
             'type' => 'time',
             'label' => 'Time Label',
