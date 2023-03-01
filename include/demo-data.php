@@ -1,11 +1,10 @@
 <?php
 
-// CLIENR SIDE
+// CLIENT SIDE
 if(class_exists('MinoOptionsBuilder')){
 
     // Remix Icon v2.5.0
     // https://remixicon.com
-
 
     $minoThemeOptions->set_group([
         'id' => 'azedw-brand-group-id',
@@ -42,7 +41,6 @@ if(class_exists('MinoOptionsBuilder')){
         'name' => 'Footer',
         'icon' => 'ri-window-fill'
     ]);
-
 
     $minoThemeOptions->set_fields_to_group('azedw-brand-group-id',[
         [
@@ -86,7 +84,6 @@ if(class_exists('MinoOptionsBuilder')){
         ]
     ]);
 
-
     $minoThemeOptions->set_fields_to_group('azedw-general-id',[
         [
             'id' => 'azedw-is-rtl-id',
@@ -115,11 +112,11 @@ if(class_exists('MinoOptionsBuilder')){
             'options' => [
                 [
                     'key' => 'boxed_width',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/boxed-width.jpg'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/boxed-width.jpg'
                 ],
                 [
                     'key' => 'full_width',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/full-width.jpg'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/full-width.jpg'
                 ]
             ]
         ],
@@ -135,9 +132,7 @@ if(class_exists('MinoOptionsBuilder')){
             'label' => 'Show Cookie Alert',
             'content' => 'Yes! Show Cookie Alert.'
         ]
-
     ]);
-
 
     $minoThemeOptions->set_fields_to_group('azedw-popup-image-id',[
         [
@@ -179,7 +174,6 @@ if(class_exists('MinoOptionsBuilder')){
         ],
     ]);
 
-
     $minoThemeOptions->set_fields_to_group('azedw-header-id',[
         [
             'type' => 'title',
@@ -195,27 +189,27 @@ if(class_exists('MinoOptionsBuilder')){
                 [
                     'key' => 'hedaer_1',
                     'value' => 'Header 1',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-5.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-5.png'
                 ],
                 [
                     'key' => 'hedaer_2',
                     'value' => 'Header 1',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-2.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-2.png'
                 ],
                 [
                     'key' => 'hedaer_3',
                     'value' => 'Header 3',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-1.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-1.png'
                 ],
                 [
                     'key' => 'hedaer_4',
                     'value' => 'Header 4',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-4.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-4.png'
                 ],
                 [
                     'key' => 'hedaer_5',
                     'value' => 'Header 5',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-6.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-6.png'
                 ]
             ]
         ],
@@ -290,7 +284,6 @@ if(class_exists('MinoOptionsBuilder')){
             'description' => 'Depend by > Hide Top Bar switch',
         ]
     ]);
-
 
     $minoThemeOptions->set_fields_to_group('azedw-title-bar-id',[
         [
@@ -374,237 +367,51 @@ if(class_exists('MinoOptionsBuilder')){
                 [
                     'key' => 'widget_1',
                     'value' => 'widget 1',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-1.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-1.png'
                 ],
                 [
                     'key' => 'widget_2',
                     'value' => 'widget 2',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-2.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-2.png'
                 ],
                 [
                     'key' => 'widget_3',
                     'value' => 'widget 3',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-3.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-3.png'
                 ],
                 [
                     'key' => 'widget_4',
                     'value' => 'widget 4',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-4.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-4.png'
                 ],
                 [
                     'key' => 'widget_5',
                     'value' => 'widget 5',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-5.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-5.png'
                 ],
                 [
                     'key' => 'widget_6',
                     'value' => 'widget 6',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-6.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-6.png'
                 ],
                 [
                     'key' => 'widget_7',
                     'value' => 'widget 7',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-7.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-7.png'
                 ],
                 [
                     'key' => 'widget_8',
                     'value' => 'widget 8',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-8.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-8.png'
                 ],
                 [
                     'key' => 'widget_9',
                     'value' => 'widget 9',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-9.png'
+                    'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/footer/footer-9.png'
                 ],
             ]
         ],
     ]);
-
-    /*
-    $minoOB->set_group([
-        'id' => 'group-example-id',
-        'name' => 'Demo Group',
-        'icon' => 'ri-dvd-fill'
-    ]);
-
-    $minoOB->set_fields_to_group('group-example-id',[
-        [
-            'type' => 'checkbox',
-            'label' => 'Checkbox Label',
-            'id' => 'checkbox-example-id',
-            'description' => 'Checkbox Description',
-            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'options' => [
-                [
-                    'key' => 'checkbox_1',
-                    'value' => 'checkbox 1',
-                ],
-                [
-                    'key' => 'checkbox_2',
-                    'value' => 'checkbox 2',
-                ]
-            ]
-        ],
-        [
-            'type' => 'code',
-            'id' => 'custom-js-code',
-            'label' => 'Custom JavaScript',
-            'description' => 'Example Description',
-            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
-        ],
-        [
-            'type' => 'color',
-            'id' => 'color-field-example',
-            'label' => 'Color Field',
-            'description' => 'Choose your color',
-            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
-        ],
-        [
-            'type' => 'date',
-            'id' => 'date-field-example',
-            'label' => 'Date Field Label',
-            'format' => 'MM/dd/yyyy',
-            'description' => 'Date Field Description',
-            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
-        ],
-        [
-            'type' => 'drop_down_box',
-            'label' => 'Drop Down Box',
-            'id' => 'drop-down-box-example',
-            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
-            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
-            'options' => [
-                [
-                    'key' => 'ddb_1',
-                    'value' => 'Drop Down Box 1',
-                ],
-                [
-                    'key' => 'ddb_2',
-                    'value' => 'Drop Down Box 2',
-                ],
-                [
-                    'key' => 'ddb_3',
-                    'value' => 'Drop Down Box 3',
-                ]
-            ]
-        ],
-        [
-            'type' => 'backup',
-            'id' => 'backup-example',
-            'import_label' => 'Backup Import Label',
-            'export_label' => 'Backup Export Label',
-            'import_description' => 'Backup Import Description',
-            'export_description' => 'Backup Export Description',
-            'import_content' => 'Backup Import Content',
-            'export_content' => 'Backup Export Content'
-        ],
-        [
-            'type' => 'font',
-            'id' => 'fonts-example',
-            'description' => "Google Font Description",
-            'content' => 'Google Font Content',
-        ],
-        [
-            'type' => 'media',
-            'id' => 'media-example',
-            'label' => 'Default Logo',
-            'description' => 'Upload your default logo here. If you not upload, then site title will load in this logo location.',
-            'placeholder' => 'Upload your default logo',
-            'content' => 'Media Content'
-        ],
-        [
-            'type' => 'number',
-            'id' => 'number-example',
-            'label' => 'Number Label',
-            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been'
-        ],
-        [
-            'type' => 'radio',
-            'label' => 'Radio Label',
-            'id' => 'radio-example',
-            'description' => 'Radio Description',
-            'content' => 'Radio Content',
-            'options' => [
-                [
-                    'key' => 'radio_1',
-                    'value' => 'radio 1',
-                ],
-                [
-                    'key' => 'radio 2',
-                    'value' => 'radio 2',
-                ]
-            ]
-        ],
-        [
-            'type' => 'select_box',
-            'label' => 'Select Header',
-            'id' => 'zad_select_header_99',
-            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
-            "scaling" => 'vertical',
-            'options' => [
-                [
-                    'key' => 'hedaer_1',
-                    'value' => 'Header 1',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-5.png'
-                ],
-                [
-                    'key' => 'hedaer_2',
-                    'value' => 'Header 1',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-2.png'
-                ],
-                [
-                    'key' => 'hedaer_3',
-                    'value' => 'Header 3',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-1.png'
-                ],
-                [
-                    'key' => 'hedaer_4',
-                    'value' => 'Header 4',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-4.png'
-                ],
-                [
-                    'key' => 'hedaer_5',
-                    'value' => 'Header 5',
-                    'img' => 'http://azedw.local/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-6.png'
-                ]
-            ]
-        ],
-        [
-            'type' => 'size_group',
-            'label' => 'Size Group Label',
-            'id' => 'size-group-example',
-            'description' => 'output example: 10px 10px 10px 10px',
-        ],
-        [
-            'id' => 'switch-example',
-            'type' => 'switch',
-            'label' => 'switch example',
-            'description' => 'switch description example',
-            'content' => 'switch content example',
-        ],
-        [
-            'type' => 'textarea',
-            'label' => 'Textarea',
-            'id' => 'textarea-example',
-            'description' => 'Textarea description example',
-            'content' => 'Textarea content example',
-            'size' => 'full'
-        ],
-        [
-            'type' => 'time',
-            'label' => 'Time Label',
-            'id' => 'time-example',
-            'description' => 'Time description example',
-            'content' => 'Time content example',
-        ]
-    ]);
-    */
 
     $minoThemeOptions->init();
 }
-
-
-
-//echo "AAA___AAA___AAA___AAA";
-
-//MinoOptions::get();

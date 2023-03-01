@@ -195,6 +195,8 @@ class MinoOptionsBuilder{
      */
     public function mino_include_scripts() {
 
+        wp_enqueue_media();
+        
         // JS
         wp_enqueue_script('mino-bootstrap-bundle', MINO_THEME_OPTIONS_URL . '/assets/js/bootstrap.bundle.min.js', ['jquery'], '3.3.7', true );
         wp_enqueue_script('mino-theme-options', MINO_THEME_OPTIONS_URL . 'build/index.js', ['jquery', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'], rand(), true);

@@ -1,20 +1,39 @@
 # MinoPress
+
+# Developer Version
+
+## for use this version be sure you are installed dependencies
+
+<code> npm install </code>
+<br>
+<code> composer install </code>
+<br>
+_After installing dependencies, run build command_
+<br>
+<code>npm run build</code>
+<br>
+<br>
+
 ## _Mino Theme Options Framwork_
 
 This WordPress Plugin Theme Options Framework developed client side using:
-`React.JS and Redux`
+`React.JS, Redux and `
 `Bootstrap 5`
 
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/mino-theme-options-framework-view.png)
 
 ## Installation
-- Download the installable WordPress plugin zip.
-- Upload and active plugin from WordPress → Plugins → Add New
-- After activation, you can start use the framework for configure your settings.
+
+-   Download the installable WordPress plugin zip.
+-   Upload and active plugin from WordPress → Plugins → Add New
+-   After activation, you can start use the framework for configure your settings.
 
 ## -- Fields --
+
 ## _Group_
+
 Before creating fields you need to create a group
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_group([
@@ -24,6 +43,7 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
@@ -31,11 +51,12 @@ Arguments
 | name | No | Group | Name of the Group. |
 | icon | No | ri-stack-line | See full list of icons [Remix Icon] |
 
-
 ## _CheckBox_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/cb-field-output-result.png)
 Add checkbox field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -59,21 +80,23 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (checkbox) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | checkbox | Label of the field. |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
-| options | No |  | Oprions (key -> value) of checkBox fields |
-
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
+| options | No | | Oprions (key -> value) of checkBox fields |
 
 ## _Costum JavaScript / CSS Code_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/code-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -87,20 +110,22 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (code) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | code | Label of the field. |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
-
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
 
 ## _Color_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/color-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -114,21 +139,24 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (color) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | color | Label of the field. |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
 
 Default color #ffffff
 
 ## _Date_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/date-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -143,6 +171,7 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
@@ -150,13 +179,15 @@ Arguments
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | date | Label of the field. |
 | format | No | 'dd/MM/yyyy' | date format |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
 
 ## _Drop Down Box_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/ddb-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -184,21 +215,23 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (drop_down_box) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | Drop Down Box | Label of the field. |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
-| options | No |  | Oprions (key -> value) of drop_down_box fields |
-
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
+| options | No | | Oprions (key -> value) of drop_down_box fields |
 
 ## _Backup_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/backup-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -215,6 +248,7 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
@@ -222,17 +256,17 @@ Arguments
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | import_label | No | Import | Import Label of the field. |
 | export_label | No | Export | Export Label of the field. |
-| import_description | No |  | Description of Import the Field. Shown below the Import field title |
-| export_description | No |  | Description of Export the Field. Shown below the Export field title |
-| import_content | No |  | Content text of the Import Field. |
-| export_content | No |  | Content text of the Export Field. |
-
-
+| import_description | No | | Description of Import the Field. Shown below the Import field title |
+| export_description | No | | Description of Export the Field. Shown below the Export field title |
+| import_content | No | | Content text of the Import Field. |
+| export_content | No | | Content text of the Export Field. |
 
 ## _Google Fonts_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/google-fonts-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -245,19 +279,21 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (font) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
-
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
 
 ## _Media_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/media-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -272,20 +308,22 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (media) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
-| placeholder | No |  | placeholder on media input field |
-| content | No |  | Content text of the Field. |
-
+| description | No | | Description of the Field. Shown below the field title |
+| placeholder | No | | placeholder on media input field |
+| content | No | | Content text of the Field. |
 
 ## _Number_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -298,19 +336,21 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (number) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | Number | Label of the field. |
 
-
 ## _Radio_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/radio-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -334,20 +374,22 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (radio) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
 | label | No | radio | Label of the field. |
-| description | No |  | Description of the Field. Shown below the field title |
-| content | No |  | Content text of the Field. |
+| description | No | | Description of the Field. Shown below the field title |
+| content | No | | Content text of the Field. |
 
+## _SelectBox_ ::TODO::
 
-## _SelectBox_  ::TODO::
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -360,21 +402,22 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (number) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | Number | Label of the field. |
-| content | No |  | Content text of the Field. |
-
-
+| content | No | | Content text of the Field. |
 
 ## _Size Group_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/Size-Group-field-output-result.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -387,18 +430,21 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (size_group) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | size_group | Label of the field. |
 
 ## _Switch_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/switcher-field-output-result-e1652637572985.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -412,20 +458,22 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (switch) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | switch | Label of the field. |
-| content | No |  | Content text of the Field. |
-
+| content | No | | Content text of the Field. |
 
 ## _Textarea_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/textArea-1-e1652638788888.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -440,23 +488,23 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (textarea) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | textarea | Label of the field. |
-| content | No |  | Content text of the Field. |
-| size | No |  half | size of textarea half or full. |
-
-
-
+| content | No | | Content text of the Field. |
+| size | No | half | size of textarea half or full. |
 
 ## _Time_
+
 Field output result
 ![N|Solid](https://minopress.com/wp-content/uploads/2022/05/Screen-Shot-2022-05-15-at-21.28.28-e1652639338265.png)
 Add code field to group id for example: `group-example-id`
+
 ```sh
 if(class_exists('MinoOptionsBuilder')){
     $minoThemeOptions->set_fields_to_group('group-example-id',[
@@ -470,19 +518,14 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 }
 ```
+
 Arguments
 | Name (Key) | Mandatory | Default | Description |
 | ------ | ------ | ------ | ------ |
 | type | Yes | | field type (time) |
 | id | Yes | | A unique ID. This ID will be used to get the value.|
-| description | No |  | Description of the Field. Shown below the field title |
+| description | No | | Description of the Field. Shown below the field title |
 | label | No | time | Label of the field. |
-| content | No |  | Content text of the Field. |
+| content | No | | Content text of the Field. |
 
-
-
-
-
-
-   [Remix Icon]: <https://remixicon.com/>
-   
+[Remix Icon]: https://remixicon.com/
