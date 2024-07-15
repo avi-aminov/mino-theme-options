@@ -54,7 +54,7 @@ Arguments
 ## _CheckBox_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/cb-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/2.png)
 Add checkbox field to group id for example: `group-example-id`
 
 ```sh
@@ -94,7 +94,7 @@ Arguments
 ## _Costum JavaScript / CSS Code_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/code-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/3.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -123,7 +123,7 @@ Arguments
 ## _Color_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/color-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/4.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -154,7 +154,7 @@ Default color #ffffff
 ## _Date_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/date-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/5.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -185,7 +185,7 @@ Arguments
 ## _Drop Down Box_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/ddb-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/6.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -229,7 +229,7 @@ Arguments
 ## _Backup_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/backup-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/7.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -264,7 +264,7 @@ Arguments
 ## _Google Fonts_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/google-fonts-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/8.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -291,7 +291,7 @@ Arguments
 ## _Media_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/media-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/9.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -321,7 +321,7 @@ Arguments
 ## _Number_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/10.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -348,7 +348,7 @@ Arguments
 ## _Radio_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/radio-field-output-result.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/11.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -387,7 +387,7 @@ Arguments
 ## _SelectBox_ ::TODO::
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/number-field-output-result-1.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/12.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -415,7 +415,7 @@ Arguments
 ## _Size Group_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/Size-Group-field-output-result.png)
+-- NEED TO ADD IMAGE --
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -442,7 +442,7 @@ Arguments
 ## _Switch_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/switcher-field-output-result-e1652637572985.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/14.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
@@ -471,7 +471,7 @@ Arguments
 ## _Textarea_
 
 Field output result
-![N|Solid](https://minopress.com/wp-content/uploads/2022/05/textArea-1-e1652638788888.png)
+![N|Solid](https://raw.githubusercontent.com/avi-aminov/mino-theme-options/main/preview/15.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh

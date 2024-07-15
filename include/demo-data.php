@@ -447,7 +447,143 @@ if (class_exists('MinoOptionsBuilder')) {
             'id' => 'time-example',
             'description' => 'Time description example',
             'content' => 'Time content example',
-        ]
+        ],
+        [
+            'type' => 'textarea',
+            'label' => 'Textarea',
+            'id' => 'textarea-example',
+            'description' => 'Textarea description example',
+            'content' => 'Textarea content example',
+            'size' => 'full'
+        ],
+        [
+            'id' => 'switch-example',
+            'type' => 'switch',
+            'label' => 'switch example',
+            'description' => 'switch description example',
+            'content' => 'switch content example',
+        ],
+        [
+            'type' => 'size_group',
+            'id' => 'size-group-example',
+            'label' => 'Size Group Label',
+            'description' => 'output example: 10px 10px 10px 10px',
+        ],
+        [
+            'type' => 'number',
+            'id' => 'number-example',
+            'label' => 'Number Label',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ],
+        [
+            'type' => 'radio',
+            'label' => 'Radio Label',
+            'id' => 'radio-example',
+            'description' => 'Radio Description',
+            'content' => 'Radio Content',
+            'options' => [
+                [
+                    'key' => 'radio_1',
+                    'value' => 'radio 1',
+                ],
+                [
+                    'key' => 'radio 2',
+                    'value' => 'radio 2',
+                ]
+            ]
+        ],
+        [
+            'type' => 'number',
+            'id' => 'number-example',
+            'label' => 'Number Label',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ],
+        [
+            'type' => 'media',
+            'id' => 'media-example',
+            'label' => 'Default Logo',
+            'description' => 'Upload your default logo here. If you not upload, then site title will load in this logo location.',
+            'placeholder' => 'Upload your default logo',
+            'content' => 'Media Content'
+        ],
+        [
+            'type' => 'font',
+            'id' => 'fonts-example',
+            'description' => "Google Font Description",
+            'content' => 'Google Font Content',
+        ],
+        [
+            'type' => 'backup',
+            'id' => 'backup-example',
+            'import_label' => 'Backup Import Label',
+            'export_label' => 'Backup Export Label',
+            'import_description' => 'Backup Import Description',
+            'export_description' => 'Backup Export Description',
+            'import_content' => 'Backup Import Content',
+            'export_content' => 'Backup Export Content'
+        ],
+        [
+            'type' => 'drop_down_box',
+            'id' => 'drop-down-box-example',
+            'label' => 'Drop Down Box',
+            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+            'options' => [
+                [
+                    'key' => 'ddb_1',
+                    'value' => 'Drop Down Box 1',
+                ],
+                [
+                    'key' => 'ddb_2',
+                    'value' => 'Drop Down Box 2',
+                ],
+                [
+                    'key' => 'ddb_3',
+                    'value' => 'Drop Down Box 3',
+                ]
+            ]
+        ],
+        [
+            'type' => 'date',
+            'id' => 'date-field-example',
+            'label' => 'Date Field Label',
+            'format' => 'MM/dd/yyyy',
+            'description' => 'Date Field Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'color',
+            'id' => 'color-field-example',
+            'label' => 'Color Field',
+            'description' => 'Choose your color',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'code',
+            'id' => 'custom-js-code',
+            'label' => 'Custom JavaScript',
+            'description' => 'Example Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting.',
+        ],
+        [
+            'type' => 'checkbox',
+            'id' => 'checkbox-example-id',
+            'label' => 'Checkbox Label',
+            'description' => 'Checkbox Description',
+            'content' => 'It has survived not only five centuries, but also the leap into electronic typesetting, Lorem Ipsum.',
+            'options' => [
+                [
+                    'key' => 'checkbox_1',
+                    'value' => 'checkbox 1',
+                ],
+                [
+                    'key' => 'checkbox_2',
+                    'value' => 'checkbox 2',
+                ]
+            ]
+        ],
+
+
     ]);
 
     $minoThemeOptions->init();
