@@ -1,7 +1,7 @@
 <?php
 
 // CLIENT SIDE
-if(class_exists('MinoOptionsBuilder')){
+if (class_exists('MinoOptionsBuilder')) {
 
     // Remix Icon v2.5.0
     // https://remixicon.com
@@ -42,7 +42,20 @@ if(class_exists('MinoOptionsBuilder')){
         'icon' => 'ri-window-fill'
     ]);
 
-    $minoThemeOptions->set_fields_to_group('azedw-brand-group-id',[
+    $minoThemeOptions->set_group([
+        'id' => 'group-example-id',
+        'name' => 'Backup',
+        'icon' => 'ri-window-fill'
+    ]);
+
+    $minoThemeOptions->set_group([
+        'id' => 'extra-example-id',
+        'name' => 'Extra',
+        'icon' => 'ri-window-fill'
+    ]);
+
+
+    $minoThemeOptions->set_fields_to_group('azedw-brand-group-id', [
         [
             'type' => 'title',
             'title' => 'Site Logo'
@@ -84,7 +97,7 @@ if(class_exists('MinoOptionsBuilder')){
         ]
     ]);
 
-    $minoThemeOptions->set_fields_to_group('azedw-general-id',[
+    $minoThemeOptions->set_fields_to_group('azedw-general-id', [
         [
             'id' => 'azedw-is-rtl-id',
             'type' => 'switch',
@@ -93,9 +106,9 @@ if(class_exists('MinoOptionsBuilder')){
             'content' => 'Turn on If your site is RTL direction'
         ],
         [
-            'id' => 'azedw-preloder-id',
+            'id' => 'azedw-preloader-id',
             'type' => 'switch',
-            'label' => 'Preloder',
+            'label' => 'Preloader',
             'content' => 'Turn off if you don\'t want your site to be Preloder.'
         ],
         [
@@ -108,7 +121,7 @@ if(class_exists('MinoOptionsBuilder')){
             'type' => 'select_box',
             'label' => 'Full Width & Extra Width',
             'id' => 'azedw-site-width-id',
-            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            'description' => "Boxed or Full width? Choose your site layout width. Default : Full Width",
             'options' => [
                 [
                     'key' => 'boxed_width',
@@ -134,7 +147,7 @@ if(class_exists('MinoOptionsBuilder')){
         ]
     ]);
 
-    $minoThemeOptions->set_fields_to_group('azedw-popup-image-id',[
+    $minoThemeOptions->set_fields_to_group('azedw-popup-image-id', [
         [
             'id' => 'azedw-hide-popup-id',
             'type' => 'switch',
@@ -174,7 +187,7 @@ if(class_exists('MinoOptionsBuilder')){
         ],
     ]);
 
-    $minoThemeOptions->set_fields_to_group('azedw-header-id',[
+    $minoThemeOptions->set_fields_to_group('azedw-header-id', [
         [
             'type' => 'title',
             'title' => 'Header design'
@@ -183,31 +196,31 @@ if(class_exists('MinoOptionsBuilder')){
             'type' => 'select_box',
             'label' => 'Select Header',
             'id' => 'azedw-select_header-id',
-            'description' => "Boxed or Fullwidth? Choose your site layout width. Default : Full Width",
+            'description' => "Boxed or Full width? Choose your site layout width. Default : Full Width",
             "scaling" => 'vertical',
             'options' => [
                 [
-                    'key' => 'hedaer_1',
+                    'key' => 'header_1',
                     'value' => 'Header 1',
                     'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-5.png'
                 ],
                 [
-                    'key' => 'hedaer_2',
+                    'key' => 'header_2',
                     'value' => 'Header 1',
                     'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-2.png'
                 ],
                 [
-                    'key' => 'hedaer_3',
+                    'key' => 'header_3',
                     'value' => 'Header 3',
                     'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-1.png'
                 ],
                 [
-                    'key' => 'hedaer_4',
+                    'key' => 'header_4',
                     'value' => 'Header 4',
                     'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-4.png'
                 ],
                 [
-                    'key' => 'hedaer_5',
+                    'key' => 'header_5',
                     'value' => 'Header 5',
                     'img' => 'https://demo.minotheme.com/azi/wp/wp-content/themes/azedw/includes/theme-options/framework-extend/images/header-6.png'
                 ]
@@ -276,16 +289,16 @@ if(class_exists('MinoOptionsBuilder')){
             'label' => 'Hide Top Bar',
         ],
         [
-            'id' => 'azedw-topbar-block-id',
+            'id' => 'azedw-top-bar-block-id',
             'type' => 'textarea',
-            'label' => 'Topbar Block',
+            'label' => 'Top bar Block',
             'content' => 'Top bar block.',
             'size' => 'full',
             'description' => 'Depend by > Hide Top Bar switch',
         ]
     ]);
 
-    $minoThemeOptions->set_fields_to_group('azedw-title-bar-id',[
+    $minoThemeOptions->set_fields_to_group('azedw-title-bar-id', [
         [
             'type' => 'title',
             'title' => "Title Area"
@@ -346,7 +359,7 @@ if(class_exists('MinoOptionsBuilder')){
     ]);
 
 
-    $minoThemeOptions->set_fields_to_group('azedw-footer-id',[
+    $minoThemeOptions->set_fields_to_group('azedw-footer-id', [
         [
             'type' => 'title',
             'title' => "Footer Widget Block"
@@ -411,6 +424,30 @@ if(class_exists('MinoOptionsBuilder')){
                 ],
             ]
         ],
+    ]);
+
+    $minoThemeOptions->set_fields_to_group('group-example-id', [
+        [
+            'type' => 'backup',
+            'id' => 'backup-example',
+            'import_label' => 'Backup Import Label',
+            'export_label' => 'Backup Export Label',
+            'import_description' => 'Backup Import Description',
+            'export_description' => 'Backup Export Description',
+            'import_content' => 'Backup Import Content',
+            'export_content' => 'Backup Export Content'
+        ]
+    ]);
+
+
+    $minoThemeOptions->set_fields_to_group('extra-example-id', [
+        [
+            'type' => 'time',
+            'label' => 'Time Label',
+            'id' => 'time-example',
+            'description' => 'Time description example',
+            'content' => 'Time content example',
+        ]
     ]);
 
     $minoThemeOptions->init();

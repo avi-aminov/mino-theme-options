@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { postRequest } from '../../services/Api';
 
-const Exporter = ({field}) => {
+const Exporter = ({ field }) => {
 
     const import_label = field.import_label || 'Import';
     const export_label = field.export_label || 'Export';
@@ -26,7 +26,7 @@ const Exporter = ({field}) => {
             const res = await postRequest(url, data);
             console.log("data: ", res);
             //setLoader( 'Save Settings' );
-        } catch(error) {
+        } catch (error) {
             //Log errors
             console.log("error: ", error);
         }
@@ -34,7 +34,7 @@ const Exporter = ({field}) => {
 
     const setImportBackup = (e) => {
         e.preventDefault();
-        saveOptionsData('backup', {importData});
+        saveOptionsData('backup', { importData });
     };
 
     const exportAndDownloadBackup = () => {
@@ -48,7 +48,7 @@ const Exporter = ({field}) => {
         element.click();
     };
 
-    return(
+    return (
         <>
             <div className="options-content-inner">
                 <div className="grid">
@@ -80,7 +80,7 @@ const Exporter = ({field}) => {
                                 {
                                     fields_data.data ?
                                         <textarea rows="4" disabled onchange={handleImportBackup} id={field.id}
-                                                  name={field.id} value={fields_data.data[field.id]}></textarea>
+                                            name={field.id} value={fields_data.data[field.id]}></textarea>
                                         : null
                                 }
                             </div>

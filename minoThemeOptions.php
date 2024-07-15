@@ -1,24 +1,25 @@
 <?php
+
 /**
  * Plugin Name: Mino Theme Options Framework
- * Plugin URI: https://minopress.com
+ * Plugin URI: https://fullstackdeveloper.co.il/
  * Description: Theme Options FrameWork.
  * Version: 1.0.0
  * Author: Avi Aminov
- * Author URI: https://minopress.com
+ * Author URI: https://fullstackdeveloper.co.il/
  * Text Domain: mino-theme-press
  * Domain Path: /languages/
  */
 
 
 // Constants
-define( 'MINO_THEME_OPTIONS_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
-define( 'MINO_THEME_OPTIONS_URL', trailingslashit(plugins_url('/', __FILE__)) );
-define( 'MINO_THEME_OPTIONS_PREFIX', 'mino_options_' );
+define('MINO_THEME_OPTIONS_PATH', trailingslashit(plugin_dir_path(__FILE__)));
+define('MINO_THEME_OPTIONS_URL', trailingslashit(plugins_url('/', __FILE__)));
+define('MINO_THEME_OPTIONS_PREFIX', 'mino_options_');
 
 
 /**
- * Require Autoloader
+ * Require Auto-loader
  */
 require_once __DIR__ . '/vendor/autoload.php';
 

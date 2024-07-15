@@ -25,7 +25,7 @@
   "dependencies": {
     "@wordpress/components": "^19.7.0",
     "@wordpress/media-utils": "^3.3.0",
-    "@wordpress/scripts": "^22.3.0",
+    "@wordpress/scripts": "^19.2.4",
     "rc-time-picker": "^3.7.3",
     "react-datepicker": "^4.7.0",
     "react-redux": "^7.2.8",
@@ -34,8 +34,8 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "node-sass": "^7.0.1",
-    "sass-loader": "^12.6.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.2.1",
     "style-loader": "^3.3.1"
   }
 }
