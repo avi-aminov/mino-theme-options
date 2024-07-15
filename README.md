@@ -20,7 +20,7 @@ This WordPress Plugin Theme Options Framework developed client side using:
 `React.JS, Redux and `
 `Bootstrap 5`
 
-![N|Solid](https://github.com/avi-aminov/mino-theme-options/preview/1.png)
+![N|Solid](https://github.com/avi-aminov/mino-theme-options/main/preview/1.png)
 
 ## Installation
 
@@ -502,7 +502,7 @@ Arguments
 ## _Time_
 
 Field output result
-![N|Solid](https://github.com/avi-aminov/mino-theme-options/preview/16.png)
+![N|Solid](https://github.com/avi-aminov/mino-theme-options/main/preview/16.png)
 Add code field to group id for example: `group-example-id`
 
 ```sh
